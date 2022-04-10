@@ -13,8 +13,6 @@ vim.g.nvim_tree_icons = {
     ignored = "◌",
   },
   folder = {
-    -- arrow_open = " ",
-    -- arrow_closed = "",
     default = "",
     open = "",
     empty = "",
@@ -36,34 +34,26 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  update_to_buf_dir = {
-    enable = false,
-  },
-  -- disable_netrw = true,
-  -- hijack_netrw = true,
-  -- open_on_setup = false,
+  disable_netrw = true,
+  hijack_netrw = true,
+  open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
     "alpha",
   },
-  -- auto_close = true,
-  -- open_on_tab = false,
-  -- hijack_cursor = false,
+  auto_close = true,
+  open_on_tab = false,
+  hijack_cursor = false,
   update_cwd = true,
-  -- update_to_buf_dir = {
-  --   enable = true,
-  --   auto_open = true,
-  -- },
-  -- --   error
-  -- --   info
-  -- --   question
-  -- --   warning
-  -- --   lightbulb
+  update_to_buf_dir = {
+    enable = true,
+    auto_open = true,
+  },
   diagnostics = {
     enable = true,
     icons = {
-      hint = "",
+      hint = "",
       info = "",
       warning = "",
       error = "",
@@ -74,14 +64,14 @@ nvim_tree.setup {
     update_cwd = true,
     ignore_list = {},
   },
-  -- system_open = {
-  --   cmd = nil,
-  --   args = {},
-  -- },
-  -- filters = {
-  --   dotfiles = false,
-  --   custom = {},
-  -- },
+  system_open = {
+    cmd = nil,
+    args = {},
+  },
+  filters = {
+    dotfiles = false,
+    custom = {},
+  },
   git = {
     enable = true,
     ignore = true,
@@ -104,14 +94,14 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  -- trash = {
-  --   cmd = "trash",
-  --   require_confirm = true,
-  -- },
+  trash = {
+    cmd = "trash",
+    require_confirm = true,
+  },
   quit_on_open = 0,
   git_hl = 1,
-  -- disable_window_picker = 0,
-  -- root_folder_modifier = ":t",
+  disable_window_picker = 0,
+  root_folder_modifier = ":t",
   show_icons = {
     git = 1,
     folders = 1,
